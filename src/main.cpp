@@ -23,7 +23,7 @@ int main(void) {
 	cin.tie(nullptr);
 	srand((unsigned int)time(NULL));
 	
-	cout << "ƒ`ƒbƒv‚ð‰½–‡w“ü‚µ‚Ü‚·‚©?";
+	cout << "ãƒãƒƒãƒ—ã‚’ä½•æžšè³¼å…¥ã—ã¾ã™ã‹?";
 	cin >> chip;
 	while (flag == 0) {
 		vector<int> deck(52);
@@ -35,10 +35,10 @@ int main(void) {
 		int input,bet;
 		vector<int> player(2);
 		vector<int> banker(2);
-		cout << "‚ ‚È‚½‚Ìƒ`ƒbƒv‚Í" << chip << "–‡‚Å‚·D\n";
+		cout << "ã‚ãªãŸã®ãƒãƒƒãƒ—ã¯" << chip << "æžšã§ã™ï¼Ž\n";
 		cout << "Place your bet.(0:player, 1:banker, 2:draw)";
 		cin >> input;
-		cout << "‰½–‡“q‚¯‚Ü‚·‚©?";
+		cout << "ä½•æžšè³­ã‘ã¾ã™ã‹?";
 		cin >> bet;
 		for (int i = 0;i < 2;i++) {
 			int r = rand() % (52 - 2 * i);
@@ -48,8 +48,8 @@ int main(void) {
 			banker[i] = deck[r];
 			deck.erase(deck.begin() + r);
 		}
-		cout << "ƒvƒŒƒCƒ„[‚ÌŽèŽDF" << player[0] << ", " << player[1] << ".\n";
-		cout << "ƒoƒ“ƒJ[‚ÌŽèŽDF" << banker[0] << ", " << banker[1] << ".\n";
+		cout << "ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã®æ‰‹æœ­ï¼š" << player[0] << ", " << player[1] << ".\n";
+		cout << "ãƒãƒ³ã‚«ãƒ¼ã®æ‰‹æœ­ï¼š" << banker[0] << ", " << banker[1] << ".\n";
 		int player_point = point(player);
 		int banker_point = point(banker);
 
@@ -58,7 +58,7 @@ int main(void) {
 			player.push_back(deck[r]);
 			deck.erase(deck.begin() + r);
 			player_point = point(player);
-			cout << "ƒvƒŒƒCƒ„[‚ÌŽèŽDF";
+			cout << "ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã®æ‰‹æœ­ï¼š";
 			for (int i = 0;i < 3;i++) {
 				cout << player[i];
 				if (i < 2) {
@@ -72,7 +72,7 @@ int main(void) {
 				banker.push_back(deck[r]);
 				deck.erase(deck.begin() + r);
 				banker_point = point(banker);
-				cout << "ƒoƒ“ƒJ[‚ÌŽèŽDF";
+				cout << "ãƒãƒ³ã‚«ãƒ¼ã®æ‰‹æœ­ï¼š";
 				for (int i = 0;i < 3;i++) {
 					cout << banker[i];
 					if (i < 2) {
@@ -86,7 +86,7 @@ int main(void) {
 				banker.push_back(deck[r]);
 				deck.erase(deck.begin() + r);
 				banker_point = point(banker);
-				cout << "ƒoƒ“ƒJ[‚ÌŽèŽDF";
+				cout << "ãƒãƒ³ã‚«ãƒ¼ã®æ‰‹æœ­ï¼š";
 				for (int i = 0;i < 3;i++) {
 					cout << banker[i];
 					if (i < 2) {
@@ -100,7 +100,7 @@ int main(void) {
 				banker.push_back(deck[r]);
 				deck.erase(deck.begin() + r);
 				banker_point = point(banker);
-				cout << "ƒoƒ“ƒJ[‚ÌŽèŽDF";
+				cout << "ãƒãƒ³ã‚«ãƒ¼ã®æ‰‹æœ­ï¼š";
 				for (int i = 0;i < 3;i++) {
 					cout << banker[i];
 					if (i < 2) {
@@ -114,7 +114,7 @@ int main(void) {
 				banker.push_back(deck[r]);
 				deck.erase(deck.begin() + r);
 				banker_point = point(banker);
-				cout << "ƒoƒ“ƒJ[‚ÌŽèŽDF";
+				cout << "ãƒãƒ³ã‚«ãƒ¼ã®æ‰‹æœ­ï¼š";
 				for (int i = 0;i < 3;i++) {
 					cout << banker[i];
 					if (i < 2) {
@@ -128,7 +128,7 @@ int main(void) {
 				banker.push_back(deck[r]);
 				deck.erase(deck.begin() + r);
 				banker_point = point(banker);
-				cout << "ƒoƒ“ƒJ[‚ÌŽèŽDF";
+				cout << "ãƒãƒ³ã‚«ãƒ¼ã®æ‰‹æœ­ï¼š";
 				for (int i = 0;i < 3;i++) {
 					cout << banker[i];
 					if (i < 2) {
@@ -143,7 +143,7 @@ int main(void) {
 			banker.push_back(deck[r]);
 			deck.erase(deck.begin() + r);
 			banker_point = point(banker);
-			cout << "ƒoƒ“ƒJ[‚ÌŽèŽDF";
+			cout << "ãƒãƒ³ã‚«ãƒ¼ã®æ‰‹æœ­ï¼š";
 			for (int i = 0;i < 3;i++) {
 				cout << banker[i];
 				if (i < 2) {
@@ -154,7 +154,7 @@ int main(void) {
 		}
 
 		if (player_point > banker_point) {
-			cout << "ƒvƒŒƒCƒ„[‚ÌŸ—˜D\n";
+			cout << "ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã®å‹åˆ©ï¼Ž\n";
 			if (input == 0) {
 				chip += bet;
 			}
@@ -163,7 +163,7 @@ int main(void) {
 			}
 		}
 		else if (player_point < banker_point) {
-			cout << "ƒoƒ“ƒJ[‚ÌŸ—˜D\n";
+			cout << "ãƒãƒ³ã‚«ãƒ¼ã®å‹åˆ©ï¼Ž\n";
 			if (input == 1) {
 				chip += bet;
 			}
@@ -172,7 +172,7 @@ int main(void) {
 			}
 		}
 		else {
-			cout << "ˆø‚«•ª‚¯D\n";
+			cout << "å¼•ãåˆ†ã‘ï¼Ž\n";
 			if (input == 2) {
 				chip += 8 * bet;
 			}
